@@ -1,0 +1,27 @@
+version: '3.4'
+services:
+  s_wordpress:
+    image: wordpress
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: s_db
+      WORDPRESS_DB_USER: myappuser
+      WORDPRESS_DB_PASSWORD: test123
+      WORDPRESS_DB_NAME: myappdb
+    volumes:
+      - wordpress:/var/www/html    
+  s_db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: myappdb
+      MYSQL_USER: myappuser
+      MYSQL_PASSWORD: test123
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - db:/var/lib/mysql
+
+volumes:
+  wordpress:
+  db:
