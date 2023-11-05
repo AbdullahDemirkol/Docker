@@ -122,4 +122,4 @@ If you want to stop the project, you can do so by running the following command 
     docker-compose down 
 ```
 
-This project was made with the help of [gökhan kandemirin's docker tutorial project](https://github.com/gkandemi/docker) and is a reproduction of [that project](https://github.com/gkandemi/docker).
+This project was made with the help of [Gökhan Kandemir's docker tutorial project](https://github.com/gkandemi/docker) and is a reproduction of [that project](https://github.com/gkandemi/docker).
